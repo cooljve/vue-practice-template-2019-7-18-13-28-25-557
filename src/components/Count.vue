@@ -18,9 +18,11 @@
         methods: {
             minusNumber() {
                 this.count--;
+                this.$emit("reduce", this.count);
             },
             addNumber() {
                 this.count++;
+                this.$emit("increase", this.count);
             }
         }
     }

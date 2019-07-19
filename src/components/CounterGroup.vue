@@ -1,17 +1,33 @@
 <template>
     <div>
-        <count v-for="count in counterNum"></count>
+        <count v-for="count in counterNum" @increase="increase" @reduce="reduce"></count>
+        <counter-sum :sum="sum"></counter-sum>
     </div>
 </template>
 
 <script>
     import Count from './Count';
+    import CounterSum from './CounterSum';
+
     export default {
         name: "CounterGroup",
-        props:["counterNum"],
-        components:{
-            Count
+        props: ["counterNum"],
+        data() {
+            return {
+                sum: 0
+            }
         },
+        components: {
+            Count,CounterSum
+        },
+        methods: {
+            increase(count) {
+                this.sum++;
+            },
+            reduce(count) {
+                this.sum--;
+            }
+        }
     }
 </script>
 

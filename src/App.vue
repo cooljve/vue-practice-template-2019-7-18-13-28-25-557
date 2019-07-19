@@ -3,7 +3,7 @@
         <img alt="Vue logo" src="./assets/logo.png">
         <div>
             <input type="text" v-model="counterNum"/>
-            <CounterGroup :counterNum="parseInt(counterNum)||0"></CounterGroup>
+            <counter-group :counterNum="parseInt(counterNum)||0"></counter-group>
         </div>
     </div>
 </template>
@@ -11,6 +11,7 @@
 <script>
     import Count from './components/Count'
     import CounterGroup from './components/CounterGroup'
+    import CounterSum from './components/CounterSum'
 
     export default {
         name: 'app',
@@ -22,7 +23,7 @@
         },
         methods: {},
         components: {
-            Count, CounterGroup
+            Count, CounterGroup,CounterSum
         }
     }
 </script>
