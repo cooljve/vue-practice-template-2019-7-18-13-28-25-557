@@ -1,4 +1,4 @@
-import Vue from 'vue'
+import Vue from 'vue' //引入vue的框架
 import App from './App.vue'
 
 Vue.config.productionTip = false

@@ -1,28 +1,28 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <Count/>
-  </div>
+    <div id="app">
+        <img alt="Vue logo" src="./assets/logo.png">
+        <Count v-for="n in 3"></Count>
+    </div>
 </template>
 
 <script>
-import Count from './components/Count'
+    import Count from './components/Count'
 
-export default {
-  name: 'app',
-  components: {
-    Count
-  }
-}
+    export default {
+        name: 'app',
+        components: {
+            Count
+        }
+    }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+    #app {
+        font-family: 'Avenir', Helvetica, Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-align: center;
+        color: #2c3e50;
+        margin-top: 60px;
+    }
 </style>
