@@ -9,9 +9,10 @@
 <script>
     export default {
         name: "Count",
+        props:['number'],
         data() {
             return {
-                count: 0
+                count: 0,
             }
         },
         methods: {
