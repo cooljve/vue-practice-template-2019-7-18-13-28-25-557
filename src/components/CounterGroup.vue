@@ -21,10 +21,10 @@
             Count,CounterSum
         },
         methods: {
-            increase(count) {
+            increase() {
                 this.sum++;
             },
-            reduce(count) {
+            reduce() {
                 this.sum--;
             }
         }
