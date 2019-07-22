@@ -1,6 +1,6 @@
 <template>
     <div>
-        <count v-for="count in counterNum" @increase="increase" @reduce="reduce"></count>
+        <count v-for="count in counterNum"></count>
         <counter-sum></counter-sum>
     </div>
 </template>
@@ -19,14 +19,6 @@
         components: {
             Count,CounterSum
         },
-        methods: {
-            increase() {
-                this.$store.commit('increase');
-            },
-            reduce() {
-                this.$store.commit('decrease');
-            }
-        }
     }
 </script>
 

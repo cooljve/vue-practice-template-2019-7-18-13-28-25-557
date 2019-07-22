@@ -18,11 +18,11 @@
         methods: {
             minusNumber() {
                 this.count--;
-                this.$emit("reduce", this.count);
+                this.$store.commit('decrease');
             },
             addNumber() {
                 this.count++;
-                this.$emit("increase", this.count);
+                this.$store.commit('increase');
             }
         }
     }
