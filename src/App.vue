@@ -9,9 +9,7 @@
 </template>
 
 <script>
-    import Count from './components/Count'
     import CounterGroup from './components/CounterGroup'
-    import CounterSum from './components/CounterSum'
 
     export default {
         name: 'app',
@@ -23,7 +21,7 @@
         },
         methods: {},
         components: {
-            Count, CounterGroup,CounterSum
+            CounterGroup
         }
     }
 </script>
