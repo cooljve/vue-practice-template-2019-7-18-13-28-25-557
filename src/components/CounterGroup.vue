@@ -1,7 +1,7 @@
 <template>
     <div>
         <count v-for="count in counterNum" @increase="increase" @reduce="reduce"></count>
-        <counter-sum :sum="sum"></counter-sum>
+        <counter-sum></counter-sum>
     </div>
 </template>
 
@@ -14,7 +14,6 @@
         props: ["counterNum"],
         data() {
             return {
-                sum: 0
             }
         },
         components: {
@@ -22,10 +21,10 @@
         },
         methods: {
             increase() {
-                this.sum++;
+                this.$store.commit('increase');
             },
             reduce() {
-                this.sum--;
+                this.$store.commit('decrease');
             }
         }
     }

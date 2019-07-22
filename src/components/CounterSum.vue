@@ -5,7 +5,11 @@
 <script>
     export default {
         name: "CounterSum",
-        props:['sum']
+        computed:{
+            sum(){
+                return this.$store.state.sum;
+            }
+        }
     }
 </script>
 
