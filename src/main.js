@@ -16,7 +16,10 @@ const store = new Vuex.Store({
         },
         decrease(state) {
             state.sum--;
-        }
+        },
+        resetSum(state,val) {
+            state.sum = val;
+        },
     }
 });
 

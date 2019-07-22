@@ -9,7 +9,7 @@
 <script>
     export default {
         name: "Count",
-        props:['number'],
+        props: ['number'],
         data() {
             return {
                 count: 0,
@@ -23,7 +23,10 @@
             addNumber() {
                 this.count++;
                 this.$store.commit('increase');
-            }
+            },
+        },
+        beforeDestroy() {
+            this.$emit('resetSum', this.$store.state.sum - this.count);
         }
     }
 </script>

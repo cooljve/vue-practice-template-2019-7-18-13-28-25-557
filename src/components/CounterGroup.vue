@@ -1,6 +1,6 @@
 <template>
     <div>
-        <count v-for="count in counterNum"></count>
+        <count v-for="count in counterNum" @resetSum="resetSum($event)"></count>
         <counter-sum></counter-sum>
     </div>
 </template>
@@ -12,12 +12,13 @@
     export default {
         name: "CounterGroup",
         props: ["counterNum"],
-        data() {
-            return {
-            }
-        },
         components: {
             Count,CounterSum
+        },
+        methods:{
+            resetSum(val){
+                this.$store.commit('resetSum',val);
+            }
         },
     }
 </script>
