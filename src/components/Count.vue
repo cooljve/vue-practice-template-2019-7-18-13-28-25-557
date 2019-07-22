@@ -26,7 +26,7 @@
             },
         },
         beforeDestroy() {
-            this.$emit('resetSum', this.$store.state.sum - this.count);
+            this.$store.commit('resetSum', this.count);
         }
     }
 </script>
